@@ -45,8 +45,8 @@ public class Console {
 		this.price = price;
 	}
 
-	public void setId(int id){
-		this.id_console=id;
+	public void setId(int id_console){
+		this.id_console=id_console;
 	}
 
 	public String getName(){
