@@ -123,48 +123,13 @@ public class BrandManagerTest {
         assertEquals(COUNTRY_3, brandRetrieved.getCountry());
     }
 
-    /*@Test // CHECK DELETING WITH FKs
-    public void checkDeleteConsolesForeignKey(){
-
-        int size;
-
-        brandManager.clearBrands();
-        brandManager.clearBrands();
-
-        List<Console> consoles = new ArrayList<>();
-        List<Brand> brands = new ArrayList<>();
-
-        consoles.add(console1);
-        consoles.add(console2);
-        consoles.add(console3);
-        consoles.add(console4);
-
-        brands.add(brand1);
-        brands.add(brand2);
-        brands.add(brand3);
-        brands.add(brand4);
-
-        consoleManager.addConsoles(consoles);
-        brandManager.addBrands(brands);
-
-        size = brandManager.deleteBrands(brands);
-
-        assertThat(size, either(is(4)).or(is(0)));
-
-        List<Brand> brandsReceived = brandManager.getAllBrands();
-
-        size = brandsReceived.size();
-
-        assertEquals(0, size);
-    }*/
-
     @Test // CHECK SEARCH BY NAME
     public void checkSearchByName(){
 
         brandManager.clearBrands();
-        brandManager.addBrand(brand1);
+        brandManager.addBrand(brand3);
 
-        List<Brand> brands = brandManager.searchBrandByName(brand1);
+        List<Brand> brands = brandManager.searchBrandByName(brand3);
         Brand brandRetrieved = brands.get(0);
 
         assertEquals(BRAND_3, brandRetrieved.getBrandName());
